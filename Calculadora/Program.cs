@@ -16,15 +16,17 @@ namespace Calculadora
             Console.WriteLine("Entre com sua opção:");
             int escolha = int.Parse(Console.ReadLine());
 
-           
+            // Substituindo o while pelo Do while no switch
 
-            while (escolha != 1 && escolha != 2 && escolha != 3 && escolha != 4 && escolha !=5)
+            /*while (escolha != 1 && escolha != 2 && escolha != 3 && escolha != 4 && escolha != 5)
             {
                 Console.WriteLine("\nOpção Inválida, Tente novamente");
                 Console.WriteLine("\nEntre com sua opção:");
                 escolha = int.Parse(Console.ReadLine());
 
-            }
+            } */
+
+
             while (escolha != 5)
             {
               switch (escolha)
@@ -63,6 +65,19 @@ namespace Calculadora
                         num2 = float.Parse(Console.ReadLine());
                         Console.WriteLine($"\nO resultado da divisão é: {num / num2}\n");
                         escolha = 0;
+                        break;
+
+                    default:
+                        /* Utilizando Do while para deixar o código mais bonito 
+                          e com menos repetição*/
+                        do
+                        {
+                            Console.WriteLine("\nOpção Inválida, Tente novamente");
+                            Console.WriteLine("\nEntre com sua opção:");
+                            escolha = int.Parse(Console.ReadLine());
+                        }
+                        while (default);
+                       
                         break;
                 }
                 if (escolha == 0)
