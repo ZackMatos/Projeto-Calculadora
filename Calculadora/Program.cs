@@ -26,7 +26,6 @@ namespace Calculadora
 
             } */
 
-
             while (escolha != 5)
             {
               switch (escolha)
